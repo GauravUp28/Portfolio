@@ -48,13 +48,16 @@ const Portfolio = () => {
     }
   };
 
+  const navItems = ['About', 'Career', 'Projects', 'Education', 'Skills', 'FAQ', 'Contact'];
+
   return (
     <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-black text-white font-sans selection:bg-purple-500 selection:text-white">
+
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-neutral-900">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {/* Mimicking the user avatar from screenshot */}
+            {/* User Avatar */}
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
               <img src="/Portfolio.png" alt="Profile" className="w-full h-full object-cover" />
             </div>
@@ -62,8 +65,8 @@ const Portfolio = () => {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex gap-8 text-sm font-medium text-neutral-400">
-            {['About', 'Career', 'Projects', 'Education', 'Skills', 'FAQ', 'Contact'].map((item) => (
+          <div className="hidden md:flex gap-8 text-sm font-medium text-neutral-400 items-center">
+            {navItems.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollTo(item.toLowerCase())}
@@ -72,6 +75,16 @@ const Portfolio = () => {
                 {item}
               </button>
             ))}
+
+            {/* RESUME BUTTON (Desktop) */}
+            <a
+              href="/Gaurav_Upadhyay_Software_Engineer_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2 bg-white text-black rounded-full font-semibold hover:bg-neutral-200 transition-all transform hover:scale-105"
+            >
+              Resume
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,7 +99,7 @@ const Portfolio = () => {
         {/* Mobile Nav */}
         {isMenuOpen && (
           <div className="md:hidden bg-neutral-900 border-b border-neutral-800 p-4 flex flex-col gap-4">
-            {['About', 'Career', 'Projects', 'Education', 'Skills', 'FAQ', 'Contact'].map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollTo(item.toLowerCase())}
@@ -95,6 +108,15 @@ const Portfolio = () => {
                 {item}
               </button>
             ))}
+            {/* RESUME BUTTON (Mobile) */}
+            <a
+              href="/Gaurav_Upadhyay_Software_Engineer_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-left font-bold text-white pt-2 border-t border-neutral-800 mt-2"
+            >
+              View Resume
+            </a>
           </div>
         )}
       </nav>
@@ -107,7 +129,6 @@ const Portfolio = () => {
             <div className="relative group">
               <div className="absolute"></div>
               <div className="relative aspect-rectangle rounded-2xl overflow-hidden">
-                {/* NOTE: Update this src to "/profile.jpg" when running locally */}
                 <img
                   src="Portfolio.png"
                   alt="Gaurav Upadhyay"
