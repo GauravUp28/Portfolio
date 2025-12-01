@@ -49,7 +49,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-purple-500 selection:text-white">
+    <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-black text-white font-sans selection:bg-purple-500 selection:text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-neutral-900">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -102,7 +102,7 @@ const Portfolio = () => {
       <main className="max-w-6xl mx-auto px-6">
 
         {/* HERO SECTION */}
-        <section id="me" className="min-h-screen flex flex-col justify-center py-20">
+        <section id="me" className="min-h-screen snap-start flex flex-col justify-center py-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative group">
               <div className="absolute"></div>
@@ -186,7 +186,7 @@ const Portfolio = () => {
         </section>
 
         {/* --- NEW SECTION: ABOUT DETAILS --- */}
-        <section id="about" className="min-h-screen flex flex-col justify-center py-20">
+        <section id="about" className="min-h-screen snap-start flex flex-col justify-center py-20">
           <div className="max-w-5xl">
             <div className="text-neutral-500 font-medium mb-4 text-sm uppercase tracking-wider">About Me</div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight">About</h2>
@@ -198,7 +198,7 @@ const Portfolio = () => {
         {/* ---------------------------------- */}
 
         {/* CAREER SECTION */}
-        <section id="career" className="min-h-screen flex flex-col justify-center py-20">
+        <section id="career" className="min-h-screen snap-start flex flex-col justify-center py-20">
           <SectionHeader badge="Career" title="And This Is My" highlight="Career" />
 
           <div className="space-y-12 mt-16">
@@ -220,7 +220,7 @@ const Portfolio = () => {
 
             <ExperienceCard
               company="Stanley Law Offices"
-              logo="https://ui-avatars.com/api/?name=Stanley+Law&background=fff&color=000" // Placeholder for non-standard logo
+              logo="/Stanley.jpeg" // Placeholder for non-standard logo
               role="Software Engineer Intern"
               period="Jun 2021 - Jun 2022"
               description={[
@@ -234,7 +234,7 @@ const Portfolio = () => {
         </section>
 
         {/* WORK / PROJECTS SECTION */}
-        <section id="projects" className="min-h-screen flex flex-col justify-center py-20">
+        <section id="projects" className="min-h-screen snap-start flex flex-col justify-center py-20">
           <SectionHeader badge="Projects" title="And These Are My" highlight="Projects" />
 
           <div className="grid gap-24 mt-16">
@@ -265,7 +265,7 @@ const Portfolio = () => {
         </section>
 
         {/* EDUCATION SECTION */}
-        <section id="education" className="min-h-screen flex flex-col justify-center py-20">
+        <section id="education" className="min-h-screen snap-start flex flex-col justify-center py-20">
           <SectionHeader badge="Education" title="And This Is My" highlight="Education" />
 
           <div className="grid gap-8 mt-16 max-w-3xl mx-auto w-full">
@@ -286,7 +286,7 @@ const Portfolio = () => {
         </section>
 
         {/* SKILLS SECTION */}
-        <section id="skills" className="min-h-screen flex flex-col justify-center py-20">
+        <section id="skills" className="min-h-screen snap-start flex flex-col justify-center py-20">
           <div className="text-center mb-16">
             <span className="px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800 text-sm font-medium text-neutral-400">
               Why me?
@@ -316,7 +316,7 @@ const Portfolio = () => {
         </section>
 
         {/* FAQ SECTION */}
-        <section id="faq" className="min-h-screen flex flex-col justify-center py-20">
+        <section id="faq" className="min-h-screen snap-start flex flex-col justify-center py-20">
           <SectionHeader badge="FAQ" title="Frequently Asked" highlight="Questions" />
           <div className="max-w-2xl mx-auto mt-12 space-y-4 w-full">
             <Accordion question="What inspired you to transition into AI-driven solutions?" answer="Working with large-scale data at AWS made me realize the potential of AI to automate complex analysis, leading me to explore RAG and OpenAI integrations." />
@@ -326,7 +326,7 @@ const Portfolio = () => {
         </section>
 
         {/* CONTACT SECTION */}
-        <section id="contact" className="min-h-screen flex flex-col justify-center py-20 text-center">
+        <section id="contact" className="min-h-screen snap-start flex flex-col justify-center py-20 text-center">
           <SectionHeader badge="Contact" title="Let's Get in" highlight="Touch" />
           <p className="text-neutral-400 mt-6 mb-10 text-lg">Looking forward to connecting and building together.</p>
           <a href="mailto:gauravupadhyay1100@gmail.com" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-neutral-200 transition-all transform hover:scale-105">
