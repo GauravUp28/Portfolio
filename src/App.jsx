@@ -154,7 +154,7 @@ const Portfolio = () => {
                   <div className="flex items-center gap-2 text-neutral-500 mb-1 text-sm uppercase tracking-wider font-semibold">
                     <MapPin size={14} /> Based and work in
                   </div>
-                  <div className="text-xl font-medium">Seattle</div>
+                  <div className="text-xl font-medium">San Francisco, CA</div>
                 </div>
                 <div>
                   <div className="flex items-center gap-2 text-neutral-500 mb-1 text-sm uppercase tracking-wider font-semibold">
@@ -223,6 +223,18 @@ const Portfolio = () => {
           <SectionHeader badge="Career" title="And This Is My" highlight="Career" />
 
           <div className="space-y-12 mt-16">
+            <ExperienceCard
+              company="Cohesity"
+              logo="https://upload.wikimedia.org/wikipedia/commons/6/62/Cohesity_logo.svg"
+              role="Software Engineer"
+              period="May 2026 - Present"
+              description={[
+                "Integrating into the backend engineering team by analyzing C++ codebases for large scale distributed systems.",
+                "Reviewing cloud native architecture on AWS to understand existing concurrency models and parallel processing strategies.",
+              ]}
+              stack={['C++', 'Go', 'gRPC', 'AWS', 'AI Integration', 'Distributed Systems']}
+            />
+
             <ExperienceCard
               company="Amazon Web Services"
               logo="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
@@ -293,13 +305,11 @@ const Portfolio = () => {
             <EducationCard
               school="Westcliff University"
               degree="MBA in Business Management"
-              date="Expected Jun 2027"
               logo="W"
             />
             <EducationCard
               school="Syracuse University"
               degree="MS in Cybersecurity and Computer Science"
-              date="May 2022"
               logo="S"
               color="bg-orange-600"
             />
